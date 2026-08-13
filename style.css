@@ -1,0 +1,325 @@
+/* ============================================
+   Chingiz Abdujalilov — Targetolog | vizitka
+   ============================================ */
+
+/* --- YORUG' MAVZU (asosiy) --- */
+:root{
+  color-scheme:light;
+
+  --page:#f3f2ef;
+  --card:#ffffff;
+  --ink:#111111;
+  --muted:#6f6f6a;
+  --faint:#e6e5e1;
+  --shadow:0 1px 2px rgba(0,0,0,.04),0 12px 40px rgba(0,0,0,.06);
+
+  /* yashil blok */
+  --block-bg:#c6efd8;
+  --block-ink:#12281d;
+  --block-line:rgba(18,40,29,.14);
+
+  /* "Targetolog" tabletkasi */
+  --pill-bg:#e0d0fb;
+  --pill-ink:#2e2245;
+
+  /* monogramma */
+  --mono-bg:#c6efd8;
+  --mono-ink:#163527;
+
+  /* tugmalar */
+  --btn1-bg:#111111;
+  --btn1-ink:#ffffff;
+  --btn2-bg:#ffffff;
+  --btn2-hover:#fafaf8;
+
+  --img-bg:#f0efec;
+}
+
+/* --- QORONG'I MAVZU --- */
+:root[data-theme="dark"]{
+  color-scheme:dark;
+
+  --page:#101114;
+  --card:#191b1f;
+  --ink:#f1f2f4;
+  --muted:#9aa0a8;
+  --faint:#2b2f35;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 16px 44px rgba(0,0,0,.45);
+
+  --block-bg:#2c5c45;
+  --block-ink:#e4f5ea;
+  --block-line:rgba(228,245,234,.18);
+
+  --pill-bg:#3a2f57;
+  --pill-ink:#e3d7fb;
+
+  --mono-bg:#2c5c45;
+  --mono-ink:#dff2e6;
+
+  --btn1-bg:#f1f2f4;
+  --btn1-ink:#16181c;
+  --btn2-bg:#191b1f;
+  --btn2-hover:#22252a;
+
+  --img-bg:#24272c;
+}
+
+/* --- asos --- */
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px 20px;
+  background:var(--page);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  transition:background .25s ease,color .25s ease;
+}
+
+.card{
+  width:100%;
+  max-width:900px;
+  background:var(--card);
+  border-radius:32px;
+  padding:40px;
+  box-shadow:var(--shadow);
+  transition:background .25s ease,box-shadow .25s ease;
+}
+
+/* --- tepa qator: monogramma + lavozim + mavzu tugmasi --- */
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:30px;
+}
+
+.top-right{display:flex;align-items:center;gap:10px}
+
+.mono{
+  width:64px;height:64px;
+  border-radius:20px;
+  background:var(--mono-bg);
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;font-weight:800;
+  letter-spacing:-.02em;
+  color:var(--mono-ink);
+  overflow:hidden;
+  flex-shrink:0;
+}
+
+/* monogramma o'rniga surat qo'yilsa */
+.mono img{width:100%;height:100%;object-fit:cover;display:block}
+
+.pill{
+  padding:9px 16px;
+  border-radius:999px;
+  background:var(--pill-bg);
+  font-size:12px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  color:var(--pill-ink);
+  white-space:nowrap;
+}
+
+/* mavzu almashtirish tugmasi */
+.theme-btn{
+  width:40px;height:40px;
+  flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:999px;
+  border:1px solid var(--faint);
+  background:transparent;
+  color:var(--ink);
+  cursor:pointer;
+  transition:background .18s ease,transform .18s ease;
+}
+
+.theme-btn:hover{background:var(--btn2-hover);transform:translateY(-1px)}
+.theme-btn svg{width:18px;height:18px}
+
+/* yorug'da oy, qorong'ida quyosh ko'rinadi */
+.icon-sun{display:none}
+:root[data-theme="dark"] .icon-sun{display:block}
+:root[data-theme="dark"] .icon-moon{display:none}
+
+/* --- HERO: chapda matn, o'ngda surat --- */
+.hero{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:40px;
+  align-items:center;
+}
+
+h1{
+  font-size:52px;
+  font-weight:800;
+  line-height:1.03;
+  letter-spacing:-.035em;
+}
+
+.about{
+  margin-top:20px;
+  max-width:44ch;
+  color:var(--muted);
+  font-size:16px;
+}
+
+.hero-photo img{
+  display:block;
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  object-position:center 20%;
+  border-radius:24px;
+  background:var(--img-bg);
+}
+
+/* --- xizmat + byudjet bloki --- */
+.service{
+  margin-top:32px;
+  padding:32px 30px 34px;
+  border-radius:26px;
+  background:var(--block-bg);
+  color:var(--block-ink);
+  transition:background .25s ease,color .25s ease;
+}
+
+.service-title{
+  font-size:26px;
+  font-weight:700;
+  line-height:1.35;
+  letter-spacing:-.02em;
+}
+
+.service-stat{
+  margin-top:24px;
+  padding-top:20px;
+  border-top:1px solid var(--block-line);
+}
+
+.service-num{
+  display:block;
+  font-size:22px;
+  font-weight:800;
+  line-height:1.1;
+  letter-spacing:-.03em;
+}
+
+.service-cap{
+  display:block;
+  margin-top:4px;
+  font-size:13px;
+  font-weight:600;
+  line-height:1.4;
+  opacity:.68;
+}
+
+/* --- ishlagan loyihalar --- */
+.section-title{
+  margin-top:36px;
+  font-size:26px;
+  font-weight:800;
+  letter-spacing:-.03em;
+  line-height:1.1;
+}
+
+.logos{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+  gap:14px;
+  margin-top:20px;
+}
+
+.logo img{
+  display:block;
+  width:100%;
+  aspect-ratio:1;
+  object-fit:cover;
+  border-radius:16px;
+  background:var(--img-bg);
+}
+
+.logo figcaption{
+  margin-top:9px;
+  text-align:center;
+  font-size:12px;
+  font-weight:600;
+  line-height:1.3;
+  color:var(--muted);
+}
+
+/* --- aloqa tugmalari --- */
+.actions{margin-top:28px;display:flex;flex-direction:column;gap:12px}
+
+.btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:18px 22px;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:16px;
+  font-weight:600;
+  transition:transform .18s ease,box-shadow .18s ease,background .18s ease,color .18s ease;
+}
+
+.btn:hover{transform:translateY(-2px)}
+
+.btn-primary{
+  background:var(--btn1-bg);
+  color:var(--btn1-ink);
+  box-shadow:0 6px 18px rgba(0,0,0,.16);
+}
+
+.btn-secondary{
+  background:var(--btn2-bg);
+  color:var(--ink);
+  border:1.5px solid var(--faint);
+}
+
+.btn-secondary:hover{background:var(--btn2-hover)}
+.btn svg{width:19px;height:19px;flex-shrink:0}
+
+.note{
+  margin-top:24px;
+  text-align:center;
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* --- planshet / tor ekran: hero bir ustunga tushadi --- */
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;gap:28px}
+  .hero-photo{order:-1}
+  .hero-photo img{aspect-ratio:5/4;border-radius:20px}
+  h1{font-size:44px}
+  .about{max-width:none}
+}
+
+/* --- telefon uchun --- */
+@media (max-width:480px){
+  .card{padding:30px 24px;border-radius:26px}
+  h1{font-size:38px}
+  .top{margin-bottom:24px;gap:8px}
+  .top-right{gap:8px}
+  .mono{width:56px;height:56px;border-radius:17px;font-size:19px}
+  .pill{padding:8px 12px;font-size:10px;letter-spacing:.08em}
+  .theme-btn{width:36px;height:36px}
+  .service{padding:26px 22px 28px;border-radius:22px}
+  .service-title{font-size:21px}
+  .service-stat{margin-top:20px;padding-top:16px}
+  .service-num{font-size:20px}
+  .service-cap{font-size:12px}
+  .section-title{font-size:22px;margin-top:30px}
+  .logos{grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:10px}
+  .logo figcaption{font-size:11px}
+}

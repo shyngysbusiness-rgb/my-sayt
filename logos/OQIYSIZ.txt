@@ -1,0 +1,40 @@
+LOGOTIPLAR PAPKASI
+==================
+
+Saytdagi "Ishlagan loyihalarim" bo'limi shu papkadan rasm oladi.
+Hozir 9 ta logotip ulangan:
+
+  alhadaya.jpg           -> Alhadaya
+  ezzy.jpg               -> Ezzy
+  fidex-academy.jpg      -> Fidex Academy
+  fikr-yetakchilari.jpg  -> Fikr Yetakchilari
+  issi.jpg               -> ISSI
+  jonon-chicken.jpg      -> Jonon Chicken
+  ozbegim.jpg            -> Ozbegim
+  zarli-luxury-home.jpg  -> Zarli Luxury Home
+  zebrano.jpg            -> Zebrano
+
+Ishlatilmayotgan fayl:
+  perspecto.jpg          -> saytdan olib tashlangan (Zarli o'rniga qo'yildi).
+                            Kerak bo'lmasa o'chirib tashlasangiz bo'ladi.
+
+Bu fayllar "Logo" papkasidagi asl nusxalardan ko'chirilgan.
+Asl fayllar joyida turibdi, ularga tegilmagan.
+
+YANGI LOGOTIP QO'SHISH
+----------------------
+1. Rasmni shu papkaga tashlang. Nomi kichik harflarda, bo'sh joysiz
+   bo'lsin (masalan: yangi-loyiha.jpg), o'zbekcha harflar ishlatmang.
+2. index.html ichidagi <div class="logos"> qismiga shu blokni qo'shing:
+
+     <figure class="logo">
+       <img src="logos/yangi-loyiha.jpg" alt="Yangi Loyiha logotipi" loading="lazy">
+       <figcaption>Yangi Loyiha</figcaption>
+     </figure>
+
+MASLAHAT
+--------
+Rasm kvadrat bo'lsa eng chiroyli chiqadi (masalan 640x640).
+Kvadrat bo'lmasa, chetlari qirqiladi - logotip markazda qolsin.
+
+Bu txt faylni o'chirib tashlasangiz ham bo'ladi, saytga ta'siri yo'q.

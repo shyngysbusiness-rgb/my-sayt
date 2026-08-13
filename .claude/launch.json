@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "vizitka",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["C:\\Users\\user\\AppData\\Local\\Temp\\claude\\D--Mening-saytim\\32396968-91f1-4d04-9805-88de8a81f291\\scratchpad\\serve.js"],
+      "port": 8080
+    }
+  ]
+}

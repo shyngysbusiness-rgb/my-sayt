@@ -1,0 +1,30 @@
+# Maxfiy ma'lumot - hech qachon GitHub'ga tushmasin
+.env
+.env.*
+*.key
+*.pem
+secrets.*
+
+# Windows / macOS tizim fayllari
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store
+
+# Muharrir sozlamalari
+.vscode/
+.idea/
+*.swp
+*~
+
+# Vaqtinchalik va zaxira fayllar
+*.log
+*.tmp
+*.bak
+~$*
+
+# Agar keyinchalik npm ishlatilsa
+node_modules/
+
+# Claude Code shaxsiy sozlamalari
+.claude/settings.local.json
