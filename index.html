@@ -1,38 +1,82 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="uz">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chingiz Abdujalilov — Targetolog</title>
-<meta name="description" content="Chingiz Abdujalilov — 7 yillik tajribaga ega targetolog. Praktik xatolar bilan yig'ilgan target xizmati.">
+<meta name="description" content="7 yillik tajribaga ega targetolog. $1 mln+ reklama byudjeti boshqarilgan. Meta platformasida natijaga qaratilgan targeting.">
+<link rel="canonical" href="https://shyngysbusiness-rgb.github.io/my-sayt/">
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#f3f2ef">
+
+<!-- Havola kartasi: Telegram, Facebook, LinkedIn -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uz_UZ">
+<meta property="og:site_name" content="Chingiz Abdujalilov">
+<meta property="og:url" content="https://shyngysbusiness-rgb.github.io/my-sayt/">
+<meta property="og:title" content="Chingiz Abdujalilov — Targetolog">
+<meta property="og:description" content="7 yillik tajriba, $1 mln+ boshqarilgan reklama byudjeti. Meta platformasida natijaga qaratilgan targeting.">
+<meta property="og:image" content="https://shyngysbusiness-rgb.github.io/my-sayt/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Chingiz Abdujalilov — targetolog">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Chingiz Abdujalilov — Targetolog">
+<meta name="twitter:description" content="7 yillik tajriba, $1 mln+ boshqarilgan reklama byudjeti.">
+<meta name="twitter:image" content="https://shyngysbusiness-rgb.github.io/my-sayt/og-image.jpg">
+
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
 </head>
 <body>
 
+  <header class="nav">
+    <div class="nav-inner">
+
+      <a class="nav-brand" href="#men-haqimda" aria-label="Boshiga qaytish">
+        <span class="mono mono-sm">ChA</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#men-haqimda"><span class="l-full">Men haqimda</span><span class="l-short">Men</span></a>
+        <a href="#ishlarim">Ishlarim</a>
+        <a href="#loyihalar"><span class="l-full">Mijozlarim</span><span class="l-short">Mijozlar</span></a>
+        <a href="#fikrlar">Fikrlar</a>
+        <a href="#savol-javob"><span class="l-full">Savol-javob</span><span class="l-short">Savollar</span></a>
+        <a href="#aloqa">Aloqa</a>
+      </nav>
+
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Yorug' / qorong'i mavzuni almashtirish" title="Mavzuni almashtirish">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+        </svg>
+      </button>
+
+    </div>
+  </header>
+
   <main class="card">
 
-    <div class="top">
-      <div class="mono">ChA</div>
-
-      <div class="top-right">
-        <span class="pill">Targetolog</span>
-
-        <button class="theme-btn" id="themeBtn" type="button" aria-label="Yorug' / qorong'i mavzuni almashtirish" title="Mavzuni almashtirish">
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-          </svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="4"/>
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <section class="hero">
+    <section class="hero" id="men-haqimda">
 
       <div class="hero-text">
+        <span class="pill">Targetolog</span>
+
+        <p class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Natija beradigan targeting
+        </p>
+
         <h1>Chingiz<br>Abdujalilov</h1>
 
         <p class="about">
@@ -40,19 +84,34 @@
           Reklama kampaniyalarini haqiqiy natijaga qaratib sozlayman va boshqaraman.
         </p>
 
-        <div class="actions">
-          <a class="btn btn-primary" href="tel:+998771232300">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
+        <div class="actions actions-hero">
+          <a class="btn btn-primary btn-arrow" href="tel:+998771232300">
             +998 77 123 23 00
+            <span class="btn-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h13M13 6l6 6-6 6"/>
+              </svg>
+            </span>
           </a>
 
           <a class="btn btn-secondary" href="https://t.me/abchingiz" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M21.94 4.3 18.9 19.2c-.23 1.02-.84 1.27-1.7.79l-4.7-3.46-2.27 2.18c-.25.25-.46.46-.94.46l.33-4.77 8.68-7.84c.38-.34-.08-.52-.58-.19L6.99 13.1l-4.6-1.44c-1-.31-1.02-1 .21-1.48L20.3 3.05c.83-.31 1.56.2 1.29 1.25z"/>
             </svg>
-            Telegram — @abchingiz
+            Telegram
+          </a>
+        </div>
+
+        <div class="hero-proof">
+          <p class="hero-proof-label">Ular bilan ishlaganman</p>
+
+          <a class="proof-logos" href="#loyihalar" aria-label="Barcha mijozlar">
+            <img src="logos/alhadaya.jpg" alt="Alhadaya" loading="lazy">
+            <img src="logos/fidex-academy.jpg" alt="Fidex Academy" loading="lazy">
+            <img src="logos/jonon-chicken.jpg" alt="Jonon Chicken" loading="lazy">
+            <img src="logos/zarli-luxury-home.jpg" alt="Zarli Luxury Home" loading="lazy">
+            <img src="logos/zebrano.jpg" alt="Zebrano" loading="lazy">
+            <span class="proof-more">+4</span>
           </a>
         </div>
       </div>
@@ -63,7 +122,7 @@
 
     </section>
 
-    <section class="service">
+    <section class="service reveal">
       <p class="service-title">Praktik xatolar bilan yig'ilgan target xizmati</p>
 
       <div class="service-stat">
@@ -72,56 +131,149 @@
       </div>
     </section>
 
-    <h2 class="section-title">Ishlagan loyihalarim</h2>
+    <h2 class="section-title reveal" id="ishlarim">Ishlarim</h2>
+
+    <div class="works">
+      <article class="work reveal">
+        <div class="work-img">Rasm qo'yiladi</div>
+        <div class="work-body">
+          <h3>Sakrabot</h3>
+          <p class="placeholder">[qisqa izoh — 1-2 jumla]</p>
+        </div>
+      </article>
+    </div>
+
+    <h2 class="section-title reveal" id="loyihalar">Mijozlarim</h2>
 
     <div class="logos">
-      <figure class="logo">
+      <figure class="logo reveal">
         <img src="logos/alhadaya.jpg" alt="Alhadaya logotipi" loading="lazy">
         <figcaption>Alhadaya</figcaption>
       </figure>
 
-      <figure class="logo">
+      <figure class="logo reveal">
         <img src="logos/ezzy.jpg" alt="Ezzy logotipi" loading="lazy">
         <figcaption>Ezzy</figcaption>
       </figure>
 
-      <figure class="logo">
+      <figure class="logo reveal">
         <img src="logos/fidex-academy.jpg" alt="Fidex Academy logotipi" loading="lazy">
         <figcaption>Fidex Academy</figcaption>
       </figure>
 
-      <figure class="logo">
+      <figure class="logo reveal">
         <img src="logos/fikr-yetakchilari.jpg" alt="Fikr Yetakchilari logotipi" loading="lazy">
         <figcaption>Fikr Yetakchilari</figcaption>
       </figure>
 
-      <figure class="logo">
+      <figure class="logo reveal">
         <img src="logos/issi.jpg" alt="ISSI logotipi" loading="lazy">
         <figcaption>ISSI</figcaption>
       </figure>
 
-      <figure class="logo">
+      <figure class="logo reveal">
         <img src="logos/jonon-chicken.jpg" alt="Jonon Chicken logotipi" loading="lazy">
         <figcaption>Jonon Chicken</figcaption>
       </figure>
 
-      <figure class="logo">
+      <figure class="logo reveal">
         <img src="logos/ozbegim.jpg" alt="Ozbegim logotipi" loading="lazy">
         <figcaption>Ozbegim</figcaption>
       </figure>
 
-      <figure class="logo">
+      <figure class="logo reveal">
         <img src="logos/zarli-luxury-home.jpg" alt="Zarli Luxury Home logotipi" loading="lazy">
         <figcaption>Zarli Luxury Home</figcaption>
       </figure>
 
-      <figure class="logo">
+      <figure class="logo reveal">
         <img src="logos/zebrano.jpg" alt="Zebrano logotipi" loading="lazy">
         <figcaption>Zebrano</figcaption>
       </figure>
     </div>
 
-    <p class="note">Savolingiz bormi — yozing, javob beraman</p>
+    <h2 class="section-title reveal" id="fikrlar">Mijozlar fikri</h2>
+
+    <div class="reviews">
+      <article class="review reveal">
+        <div class="rev-mono rev-1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <p class="rev-text placeholder">[sharh matni]</p>
+        <p class="rev-name placeholder">[mijoz nomi]</p>
+      </article>
+
+      <article class="review reveal">
+        <div class="rev-mono rev-2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <p class="rev-text placeholder">[sharh matni]</p>
+        <p class="rev-name placeholder">[mijoz nomi]</p>
+      </article>
+
+      <article class="review reveal">
+        <div class="rev-mono rev-3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <p class="rev-text placeholder">[sharh matni]</p>
+        <p class="rev-name placeholder">[mijoz nomi]</p>
+      </article>
+    </div>
+
+    <h2 class="section-title reveal" id="savol-javob">Savol-javob</h2>
+
+    <div class="faq">
+      <div class="faq-item reveal">
+        <button class="faq-q" type="button" id="faq-btn-1" aria-expanded="false" aria-controls="faq-a-1">
+          <span>Qaysi platformalarda ishlaysiz?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-btn-1">
+          <div class="faq-a-inner">
+            <p>Men faqat Meta platformasida ishlayman.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q" type="button" id="faq-btn-2" aria-expanded="false" aria-controls="faq-a-2">
+          <span>Natija kafolatlanadimi?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-btn-2">
+          <div class="faq-a-inner">
+            <p>Ha, kafolatlanadi. Natija bo'lmasa — pulingiz menga kerak emas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="contact reveal" id="aloqa">
+      <h2 class="section-title contact-title">Aloqa</h2>
+      <p class="note">Savolingiz bormi — yozing, javob beraman</p>
+
+      <div class="actions actions-row">
+        <a class="btn btn-primary" href="tel:+998771232300">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          +998 77 123 23 00
+        </a>
+
+        <a class="btn btn-secondary" href="https://t.me/abchingiz" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21.94 4.3 18.9 19.2c-.23 1.02-.84 1.27-1.7.79l-4.7-3.46-2.27 2.18c-.25.25-.46.46-.94.46l.33-4.77 8.68-7.84c.38-.34-.08-.52-.58-.19L6.99 13.1l-4.6-1.44c-1-.31-1.02-1 .21-1.48L20.3 3.05c.83-.31 1.56.2 1.29 1.25z"/>
+          </svg>
+          Telegram — @abchingiz
+        </a>
+      </div>
+    </section>
 
   </main>
 
