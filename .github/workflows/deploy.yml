@@ -1,0 +1,54 @@
+name: Deploy
+
+# main branch'ga har push bo'lganda saytni serverga yuboradi.
+# Qo'lda ishga tushirish: GitHub -> Actions -> Deploy -> Run workflow
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Bir vaqtda faqat bitta deploy ishlasin.
+# Ketma-ket push qilinsa, eskisi bekor qilinadi.
+concurrency:
+  group: deploy-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Kodni olish
+        uses: actions/checkout@v4
+
+      - name: SSH kalitni tayyorlash
+        run: |
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          echo "${{ secrets.DEPLOY_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Serverga yuborish (rsync)
+        run: |
+          rsync -avz --delete \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='.claude/' \
+            --exclude='.gitignore' \
+            --exclude='CLAUDE.md' \
+            --exclude='*.md' \
+            -e "ssh -i ~/.ssh/deploy_key -o BatchMode=yes" \
+            ./ "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/home/deploy/sites/my-sayt/"
+
+      - name: Sayt ochilishini tekshirish
+        run: |
+          sleep 2
+          code=$(curl -fsS -o /dev/null -w '%{http_code}' https://perspecto.uz/)
+          echo "https://perspecto.uz -> $code"
+          test "$code" = "200"
+
+      - name: Kalitni o'chirish
+        if: always()
+        run: rm -f ~/.ssh/deploy_key
